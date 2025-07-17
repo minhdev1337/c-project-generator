@@ -1,0 +1,53 @@
+{
+  "name": "c-project-generator",
+  "displayName": "C++ Project Builder Pro",
+  "description": "A VS Code extension to create a new C++ project with .vscode folder and task",
+  "version": "0.0.3",
+  "publisher": "minhdev1337",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.99.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+     "onCommand:c-project-generator.createCppProject"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "c-project-generator.createCppProject",
+        "title": "Create C++ Project"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.99.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minhdev1337/c-project-generator.git"
+  }
+}
